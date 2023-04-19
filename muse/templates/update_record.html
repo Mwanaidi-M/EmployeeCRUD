@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Update
+{% endblock %}
+
+{% block content %}
+    <form method="POST" class="border p-4">
+
+        {{ u_form.csrf_token }}
+
+        <div class=" mb-5 row justify-content-between align-items-end">
+            <h5 class=" col-sm-8">UPDATE EMPLOYEE</h5>
+            {{ u_form.submit(class="col-sm-4 mb btn btn-dark text-center") }}
+        </div>
+
+        <div class=" mb-4 row justify-content-around">
+            {{ u_form.f_name.label(class="col-sm-4 col-form-label") }}
+            <div class="col-sm-8">
+                {{ u_form.f_name(value=emp.first_name,class="form-control") }}
+            </div>
+        </div>
+
+        <div class=" mb-4 row justify-content-around">
+            {{ u_form.l_name.label(class="col-sm-4 col-form-label") }}
+            <div class="col-sm-8">
+                {{ u_form.l_name(value=emp.last_name,class="form-control") }}
+            </div>
+        </div>
+
+        <div class=" mb-4 row justify-content-around">
+            {{ u_form.address.label(class="col-sm-4 col-form-label") }}
+            <div class="col-sm-8">
+                {{ u_form.address(value=emp.address,class="form-control") }}
+            </div>
+        </div>
+
+        <div class=" mb-4 row justify-content-around">
+            {{ u_form.salary.label(class="col-sm-4 col-form-label") }}
+            <div class="col-sm-8">
+                {{ u_form.salary(value=emp.salary,class="form-control") }}
+            </div>
+        </div>
+    </form>
+{% endblock %}

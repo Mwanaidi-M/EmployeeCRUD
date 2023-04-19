@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+
+    <section class=" w-50 mx-auto d-flex flex-wrap justify-content-around">
+        <a href="{{ url_for('create_page') }}" class="btn btn-outline-secondary">CREATE</a>
+        <a href="{{ url_for('view_page') }}" class="btn btn-outline-secondary">VIEW</a>
+        <a href="{{ url_for('about_page') }}" class="btn btn-outline-secondary">ABOUT</a>
+    </section>
+
+{% endblock %}
+
